@@ -52,9 +52,11 @@
             textBox_password.UseSystemPasswordChar = true;
         }
 
-        private void checkBox1_CheckedChanged(object sender, EventArgs e) //галочка скрыть
-        {
-            if (checkBox1.Checked == true)
+КАК СКРЫТЬ ПАРОЛЬ
+Элемент CheckBox
+Событие: CheckedChanged
+Код:
+ if (checkBox_password.Checked == true)
             {
                 textBox_password.UseSystemPasswordChar = true;
             }
@@ -62,3 +64,6 @@
             {
                 textBox_password.UseSystemPasswordChar = false;
             }
+При загрузке чтобы был уже скрыт: 
+            checkBox_password.Checked = true;
+            textBox_password.UseSystemPasswordChar = true;
