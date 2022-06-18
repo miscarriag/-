@@ -1,0 +1,6 @@
+        private void button_poisk_Click(object sender, EventArgs e)
+        {
+            poiskokno poiskokno = new poiskokno();
+            poiskokno.Owner = this;
+            poiskokno.Show();
+        }
