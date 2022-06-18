@@ -1,0 +1,18 @@
+        private void button_poisk_Click(object sender, EventArgs e)
+        {
+            poisk main = this.Owner as poisk;
+            if (main != null)
+            {
+                for (int i = 0; i < main.dataGridView1.RowCount; i++)
+                {
+                    main.dataGridView1.Rows[i].Selected = false;
+                    for (int j = 0; j < main.dataGridView1.ColumnCount; j++)
+                        if (main.dataGridView1.Rows[i].Cells[j].Value != null)
+                            if (main.dataGridView1.Rows[i].Cells[j].Value.ToString().Contains(textBox_poisk.Text))
+                            {
+                                main.dataGridView1.Rows[i].Selected = true;
+                                break;
+                            }
+                }
+            }
+        }
