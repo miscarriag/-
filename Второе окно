@@ -1,0 +1,38 @@
+       private void main_Load(object sender, EventArgs e) //скрытие формы
+        {
+            this.Hide();
+
+        }
+
+        private void comboBox_name_TextChanged(object sender, EventArgs e)
+        {
+            label_price.Text = "Цена:";
+            label_proizvoditel.Text = "Производитель:";
+            if (comboBox_name.Text == "Диван")
+            {
+                textBox_opisanie.Text = "крутой диван";
+                label_proizvoditel.Text += " маша";
+                label_price.Text += " 21.000 рублей";
+                pictureBox_photo.Image = Properties.Resources.диван;
+            }
+            else if (comboBox_name.Text == "Кровать")
+            {
+                textBox_opisanie.Text = "крутая кровать";
+                label_proizvoditel.Text += " маша";
+                label_price.Text += " 210.000 рублей";
+                pictureBox_photo.Image = Properties.Resources.кровать;
+            }
+            else if (comboBox_name.Text == "Кресло")
+            {
+                textBox_opisanie.Text = "кресло удобноне супер класс";
+                label_proizvoditel.Text += " маша";
+                label_price.Text += " 245.000 рублей";
+                pictureBox_photo.Image = Properties.Resources.кресло;
+            }
+        }
+
+        private void button_poisk_Click(object sender, EventArgs e)
+        {
+            poisk poisk = new poisk();
+            poisk.Show();
+        }
